@@ -1,0 +1,33 @@
+// General stuff
+* {
+  text-align: center;
+  font-family: helvetica, arial, sans-serif;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+// Fixed header
+.header {
+  background-color: transparent;
+  width: 100%;
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: $headerHeight;
+  color: black !important;
+  &--content {
+    display: flex;
+    text-align: center;
+  }
+  a {
+    color: black !important;
+  }
+}
+
+.body {
+  position: absolute;
+  top: 18px;
+  left: 0;
+  height: calc(100vh - #{$headerHeight});
+  width: 100%;
+}

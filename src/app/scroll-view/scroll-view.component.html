@@ -1,0 +1,11 @@
+<div class="scroll-view">
+  <div class="scroll-view__header">
+    <ng-content select="[header]"></ng-content>
+  </div>
+  <div class="scroll-view__content" #scrollBody>
+    <ng-content select="[content]"></ng-content>
+  </div>
+  <div class="scroll-view__footer">
+    <ng-content select="[footer]"></ng-content>
+  </div>
+</div>

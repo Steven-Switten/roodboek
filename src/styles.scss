@@ -1,6 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
-@import 'app/styles/main.scss';
+@import './styles/variables.scss';
 
-html {
-  background-color: red;
-}
+@import './styles/layout.scss';
+@import './styles/main.scss';
+@import './styles/flex.scss';

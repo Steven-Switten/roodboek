@@ -1,0 +1,29 @@
+.scroll-view {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  display: grid;
+  grid-template-rows: minmax(min-content, max-content) minmax(50px, 1fr) minmax(min-content, max-content);
+  grid-template-columns: 1fr;
+  grid-template-areas: 'header' 'content' 'footer';
+
+  &__header {
+    grid-area: header;
+  }
+
+  &__content {
+    overflow-y: auto;
+    overflow-x: hidden;
+    grid-area: content;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  &__footer {
+    grid-area: footer;
+  }
+}

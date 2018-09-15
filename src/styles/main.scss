@@ -1,0 +1,23 @@
+.main {
+  &--top {
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    $borderWidth: 40px;
+
+    height: calc(100vh - #{$headerHeight} - #{$borderWidth}* 2);
+
+    background-color: $red;
+    color: white;
+
+    border: solid red $borderWidth;
+  }
+
+  &--bottom {
+    margin: 20px;
+    height: 100vh;
+    .title {
+      color: $red;
+    }
+  }
+}
