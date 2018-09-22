@@ -1,0 +1,13 @@
+.panel {
+  &__title {
+    font-weight: 600;
+    font-size: $rem-5;
+    @include mq-ty {
+      font-size: $rem-6;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+}

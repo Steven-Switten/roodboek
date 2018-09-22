@@ -1,0 +1,25 @@
+.subject {
+  position: relative;
+  border: solid $darkerRed $borderWidth;
+  min-height: calc(100vh - #{$headerHeight} - #{$borderWidth}* 2);
+
+  &__title {
+    text-align: center;
+  }
+
+  &__content {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+
+    max-width: 600px;
+    @include mq-md {
+      max-width: 800px;
+    }
+    @include mq-lg {
+      max-width: 1000px;
+    }
+
+    margin-top: 20px;
+  }
+}

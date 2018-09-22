@@ -1,5 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { faMoneyBillWave } from '@fortawesome/free-solid-svg-icons';
+import { faUserGraduate } from '@fortawesome/free-solid-svg-icons';
+import { faHeartbeat } from '@fortawesome/free-solid-svg-icons';
+import { faHandHoldingHeart } from '@fortawesome/free-solid-svg-icons';
+import { faLeaf } from '@fortawesome/free-solid-svg-icons';
+import { faGlobeAfrica } from '@fortawesome/free-solid-svg-icons';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
+import { faUniversity } from '@fortawesome/free-solid-svg-icons';
+import { faBuilding } from '@fortawesome/free-solid-svg-icons';
+import { faUsers } from '@fortawesome/free-solid-svg-icons';
+import { faHandshake } from '@fortawesome/free-solid-svg-icons';
+import { faBrain } from '@fortawesome/free-solid-svg-icons';
+
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main',
@@ -13,21 +27,79 @@ export class MainComponent implements OnInit {
   bottomText = this.loremIpsum();
 
   faChevronDown = faChevronDown;
-  fragment: string;
+  faMoneyBillWave = faMoneyBillWave;
+  faUserGraduate = faUserGraduate;
+  faHeartbeat = faHeartbeat;
+  faHandHoldingHeart = faHandHoldingHeart;
+  faLeaf = faLeaf;
+  faGlobeAfrica = faGlobeAfrica;
+  faHome = faHome;
+  faUniversity = faUniversity;
+  faBuilding = faBuilding;
+  faUsers = faUsers;
+  faHandshake = faHandshake;
+  faBrain = faBrain;
+
   tiles: any[] = [];
-  constructor() {
-    this.tiles.push({ text: 'Hoofdstuk 1', color: 'blue' });
-    this.tiles.push({ text: 'Hoofdstuk 2', color: 'red' });
-    this.tiles.push({ text: 'Hoofdstuk 3', color: 'green' });
-    this.tiles.push({ text: 'Hoofdstuk 4', color: 'yellow' });
-    this.tiles.push({ text: 'Hoofdstuk 5', color: 'brown' });
-    this.tiles.push({ text: 'Hoofdstuk 6', color: 'grey' });
-    this.tiles.push({ text: 'Hoofdstuk 7', color: 'orange' });
-    this.tiles.push({ text: 'Hoofdstuk 8', color: 'pink' });
-    this.tiles.push({ text: 'Hoofdstuk 9', color: 'teal' });
-    this.tiles.push({ text: 'Hoofdstuk 10', color: 'purple' });
-    this.tiles.push({ text: 'Hoofdstuk 11', color: 'red' });
-    this.tiles.push({ text: 'Hoofdstuk 12', color: 'green' });
+
+  constructor(private router: Router) {
+    this.tiles.push({
+      text: 'Kritiek op het kapitalisme',
+      color: '#2b7191',
+      icon: faBuilding,
+      link: 'A'
+    });
+    this.tiles.push({
+      text: 'Het Socialistisch alternatief',
+      color: '#a23578',
+      icon: faUsers
+    });
+    this.tiles.push({
+      text: 'Economische democratie',
+      color: '#f01f4d',
+      icon: faHandshake
+    });
+    this.tiles.push({
+      text: 'De duurzame economie',
+      color: '#b8d277',
+      icon: faLeaf
+    });
+    this.tiles.push({
+      text: 'Het politieke kader',
+      color: '#fc9260',
+      icon: faUniversity
+    });
+    this.tiles.push({
+      text: 'Fiscaliteit: haal het geld waar het zit',
+      color: '#88aa55',
+      icon: faMoneyBillWave
+    });
+    this.tiles.push({
+      text: 'De gezondheidszorg',
+      color: '#2b7191',
+      icon: faHeartbeat
+    });
+    this.tiles.push({
+      text: 'De vergrijzing en de pensioenen',
+      color: '#e959a3',
+      icon: faHandHoldingHeart
+    });
+    this.tiles.push({
+      text: 'Onderwijs',
+      color: '#50d0de',
+      icon: faUserGraduate
+    });
+    this.tiles.push({
+      text: 'Internationaal',
+      color: '#1e7060',
+      icon: faGlobeAfrica
+    });
+    this.tiles.push({ text: 'Strategie', color: '#b369b1', icon: faBrain });
+    this.tiles.push({ text: 'De partij', color: '#ee3030', icon: faHome });
+  }
+
+  navigateToSubject(link: string) {
+    this.router.navigate([link]);
   }
 
   ngOnInit() {}

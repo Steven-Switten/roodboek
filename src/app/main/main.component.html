@@ -1,6 +1,6 @@
 <app-scroll-view>
 	<div class="main" content>
-		<div class="main--top scroll-view--content">
+		<div class="main__top scroll-view--content">
 			<div class="flex-column flex-align-items-center">
 				<h3 class="flex-row">{{topTitle}}</h3>
 				<h1 class="flex-row">
@@ -8,22 +8,26 @@
 				</h1>
 				<h3 class="flex-row">{{subTitle}}</h3>
 				<a class="flex-row" href="/#details">
-					<fa-icon [icon]="faChevronDown" class="chevronDown"></fa-icon>
+					<fa-icon [icon]="faChevronDown" class="largeWhiteIcon"></fa-icon>
 				</a>
 			</div>
 		</div>
-		<div class="main--bottom" id="details">
+		<div class="main__bottom" id="details">
 			<h2 class="title">
 				{{bottomTitle}}
 			</h2>
 
 			<div class="content">
-				<span class="text" style="white-space:pre-wrap;">
-					{{bottomText}}
-				</span>
+				<div class="text">
+					<p>
+						{{bottomText}}
+					</p>
+				</div>
 				<div class="tiles">
-					<div *ngFor="let tile of tiles" class="tile" [ngStyle]="{'background': tile.color}">
-						<span>{{tile.text}}</span>
+					<div *ngFor="let tile of tiles" class="tile flex-column" [ngStyle]="{'background': tile.color}" (click)="navigateToSubject(tile.link)">
+						<fa-icon [icon]="tile.icon" class="flex-row largeWhiteIcon"></fa-icon>
+						<br />
+						<span class="flex-row">{{tile.text}}</span>
 					</div>
 				</div>
 			</div>

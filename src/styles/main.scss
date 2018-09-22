@@ -1,9 +1,8 @@
 .main {
-  &--top {
+  &__top {
     display: flex;
     justify-content: center; /* align horizontal */
     align-items: center; /* align vertical */
-    $borderWidth: 40px;
 
     height: calc(100vh - #{$headerHeight} - #{$borderWidth}* 2);
 
@@ -13,36 +12,40 @@
     border: solid $darkerRed $borderWidth;
   }
 
-  &--bottom {
+  &__bottom {
     width: 100%;
     min-height: 100vh;
-    .content {
-      width: 100%;
-      margin-left: auto;
-      margin-right: auto;
 
-      max-width: 600px;
-      @include mq-md {
-        max-width: 860px;
-      }
-      @include mq-lg {
-        max-width: 1200px;
-      }
-
-      margin-top: 20px;
-      display: grid;
-    }
     .title {
       margin-left: 20px;
       margin-right: 20px;
       color: $darkRed;
     }
   }
+
+  .content {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    max-width: 600px;
+    @include mq-md {
+      max-width: 860px;
+    }
+    @include mq-lg {
+      max-width: 1200px;
+    }
+
+    margin-top: 20px;
+    display: grid;
+  }
 }
 
 .text {
-  margin: 20px 5vw;
-  text-align: justify;
+  * {
+    text-align: justify;
+    font-size: $rem-6;
+  }
 }
 
 .tiles {
@@ -62,7 +65,7 @@
     grid-template-columns: repeat(auto-fit, #{$tileWidthLg});
   }
 
-  grid-gap: $em;
+  grid-gap: $em-2;
   padding: $em-2 $em-4 $em-8;
 
   .tile {
@@ -71,9 +74,11 @@
     justify-self: center;
     align-items: center;
     text-align: center;
-    color: white;
+    color: white !important;
     height: $tileWidthSm;
     width: $tileWidthSm;
+    font-size: $rem-7;
+    transition: 0.3s;
 
     @include mq-md {
       height: $tileWidthMd;
@@ -84,10 +89,20 @@
       height: $tileWidthLg;
       width: $tileWidthLg;
     }
+
+    cursor: pointer;
+
+    &:hover {
+      font-size: $rem * 7.7;
+      width: 110%;
+      height: 110%;
+      z-index: 100;
+      filter: brightness(115%);
+    }
   }
 }
 
-.chevronDown {
+.largeWhiteIcon {
   color: white;
-  font-size: 180%;
+  font-size: 200%;
 }
