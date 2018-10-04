@@ -52,7 +52,8 @@ export class MainComponent implements OnInit {
     this.tiles.push({
       text: 'Het Socialistisch alternatief',
       color: '#a23578',
-      icon: faUsers
+      icon: faUsers,
+      link: 'B'
     });
     this.tiles.push({
       text: 'Economische democratie',

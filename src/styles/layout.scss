@@ -7,7 +7,7 @@
 
 // Fixed header
 .header {
-  background-color: transparent;
+  background-color: $darkerRed;
   width: 100%;
   z-index: 100;
   position: absolute;
@@ -15,19 +15,28 @@
   left: 0;
   height: $headerHeight;
   color: black !important;
+
   &--content {
     display: flex;
     text-align: center;
+    height: $headerHeight;
+    align-items: center;
   }
   a {
-    color: black !important;
+    color: white !important;
+    text-decoration: none;
+    &:hover {
+      color: bisque !important;
+    }
+    width: max-content;
   }
 }
 
 .body {
   position: absolute;
-  top: 18px;
   left: 0;
+  top: $headerHeight;
   height: calc(100vh - #{$headerHeight});
+
   width: 100%;
 }

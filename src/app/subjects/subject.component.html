@@ -1,0 +1,38 @@
+<app-scroll-view>
+    <div class="subject" content>
+        <div class="text subject__content ">
+            <br />
+            <mat-card>
+                <div [innerHTML]="introduction"></div>
+                <br>
+            </mat-card>
+            <mat-accordion multi="true">
+                <mat-expansion-panel class="panel" *ngFor="let chapter of chapters">
+                    <mat-expansion-panel-header>
+                        <mat-panel-title class="panel__title">
+                            {{chapter.title}}
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div [innerHTML]="chapter.innerHtml"></div>
+                </mat-expansion-panel>
+            </mat-accordion>
+            <div class="flex flex-row subject__footer">
+                <div class="flex-column flex-align-items-center">
+                    <div class="flex-row">
+                        <!-- <fa-icon [icon]="faChevronLeft" *ngIf="previous.route"></fa-icon> -->
+                        &nbsp; &nbsp; &nbsp;
+                        <a [routerLink]="previous.route" replaceUrl="true">{{previous.text}}</a>
+                    </div>
+                </div>
+                <div class="flex-column flex-align-items-center"><a routerLink="/">Overzicht</a></div>
+                <div class="flex-column flex-align-items-center">
+                    <div class="flex-row">
+                        <a [routerLink]="next.route" replaceUrl="true">{{next.text}} </a>
+                        &nbsp; &nbsp; &nbsp;
+                        <!-- <fa-icon [icon]="faChevronRight" *ngIf="next.route"></fa-icon> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</app-scroll-view>

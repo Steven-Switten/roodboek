@@ -7,7 +7,10 @@
   right: 0;
   height: 100%;
   display: grid;
-  grid-template-rows: minmax(min-content, max-content) minmax(50px, 1fr) minmax(min-content, max-content);
+  grid-template-rows: minmax(min-content, max-content) minmax(50px, 1fr) minmax(
+      min-content,
+      max-content
+    );
   grid-template-columns: 1fr;
   grid-template-areas: 'header' 'content' 'footer';
 

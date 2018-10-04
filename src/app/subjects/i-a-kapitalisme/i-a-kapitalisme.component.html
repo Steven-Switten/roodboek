@@ -1,18 +1,2 @@
-<app-scroll-view>
-    <div class="subject scroll-view--content" content>
-        <div class="text subject__content ">
-            <div [innerHTML]="iAinleiding"></div>
-            <br>
-            <mat-accordion>
-                <mat-expansion-panel class="panel" *ngFor="let chapter of chapters">
-                    <mat-expansion-panel-header>
-                        <mat-panel-title class="panel__title">
-                            {{chapter.title}}
-                        </mat-panel-title>
-                    </mat-expansion-panel-header>
-                    <div [innerHTML]="chapter.innerHtml"></div>
-                </mat-expansion-panel>
-            </mat-accordion>
-        </div>
-    </div>
-</app-scroll-view>
+<app-subject [introduction]="iAinleiding" [chapters]="chapters" [next]="next">
+</app-subject>

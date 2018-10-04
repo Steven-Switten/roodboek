@@ -1,6 +1,6 @@
 <app-scroll-view>
 	<div class="main" content>
-		<div class="main__top scroll-view--content">
+		<div class="main__top ">
 			<div class="flex-column flex-align-items-center">
 				<h3 class="flex-row">{{topTitle}}</h3>
 				<h1 class="flex-row">
@@ -13,16 +13,17 @@
 			</div>
 		</div>
 		<div class="main__bottom" id="details">
-			<h2 class="title">
-				{{bottomTitle}}
-			</h2>
-
 			<div class="content">
-				<div class="text">
-					<p>
-						{{bottomText}}
-					</p>
-				</div>
+				<mat-card>
+					<h2 class="title">
+						{{bottomTitle}}
+					</h2>
+					<div class="text">
+						<p>
+							{{bottomText}}
+						</p>
+					</div>
+				</mat-card>
 				<div class="tiles">
 					<div *ngFor="let tile of tiles" class="tile flex-column" [ngStyle]="{'background': tile.color}" (click)="navigateToSubject(tile.link)">
 						<fa-icon [icon]="tile.icon" class="flex-row largeWhiteIcon"></fa-icon>

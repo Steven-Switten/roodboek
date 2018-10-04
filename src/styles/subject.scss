@@ -1,10 +1,14 @@
 .subject {
   position: relative;
-  border: solid $darkerRed $borderWidth;
-  min-height: calc(100vh - #{$headerHeight} - #{$borderWidth}* 2);
+  min-height: calc(100vh - #{$borderWidth} * 2);
+
+  border: solid $darkerRed;
+  border-width: $borderWidth;
+  border-top: none;
 
   &__title {
     text-align: center;
+    color: $darkRed;
   }
 
   &__content {
@@ -19,7 +23,30 @@
     @include mq-lg {
       max-width: 1000px;
     }
-
-    margin-top: 20px;
   }
+
+  &__footer {
+    margin: $em-8 0;
+    a,
+    fa-icon {
+      color: black;
+      text-decoration: none;
+      transition: 0.2s;
+      &:hover {
+        color: slategrey;
+        transition: 0.2s;
+      }
+    }
+  }
+}
+
+.mat-card {
+  margin-bottom: $em-4;
+}
+
+.back-button {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  z-index: 200;
 }

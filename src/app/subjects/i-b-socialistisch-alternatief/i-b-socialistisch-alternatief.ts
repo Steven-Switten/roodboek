@@ -7,14 +7,15 @@ class Chapter {
 }
 
 @Component({
-  selector: 'app-i-a-kapitalisme',
-  templateUrl: './i-a-kapitalisme.component.html'
+  selector: 'app-i-b-socialistisch-alternatief',
+  templateUrl: './i-b-socialistisch-alternatief.html'
 })
-export class IAKapitalismeComponent implements OnInit {
+export class IBSocialistischAlternatiefComponent implements OnInit {
   iAinleiding: string;
 
   chapters: any[] = [];
-  next = { text: 'Het Socialistisch alternatief', route: '/B' };
+  next = { text: 'Economische Democratie', route: '/C' };
+  previous = { text: 'Kritiek op het kapitalisme', route: '/A' };
 
   constructor(private http: HttpClient) {}
 
