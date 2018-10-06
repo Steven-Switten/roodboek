@@ -1,16 +1,21 @@
-import { Component, Input } from '@angular/core';
+import {
+  Component,
+  Input,
+  TemplateRef,
+  ContentChildren,
+  AfterContentInit
+} from '@angular/core';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import { TemplateDirective } from '../directives/template.directive';
+import { getTemplateByName } from '../directives/template.helper';
 @Component({
   selector: 'app-subject',
   templateUrl: './subject.component.html'
 })
-export class SubjectComponent {
+export class SubjectComponent implements AfterContentInit {
   faChevronRight = faChevronRight;
   faChevronLeft = faChevronLeft;
-
-  @Input()
-  introduction: string;
 
   @Input()
   previous: { route: string; text: string } = { route: undefined, text: '' };
@@ -20,4 +25,24 @@ export class SubjectComponent {
 
   @Input()
   chapters: any[] = [];
+
+  introductionTemplate: TemplateRef<any>;
+
+  chapterTemplates = {};
+
+  @ContentChildren(TemplateDirective)
+  templates: any;
+
+  ngAfterContentInit(): void {
+    this.chapters.forEach(element => {
+      this.chapterTemplates[element.title] = getTemplateByName(
+        this.templates,
+        element.title
+      );
+    });
+    this.introductionTemplate = getTemplateByName(
+      this.templates,
+      'introduction'
+    );
+  }
 }

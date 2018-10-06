@@ -3,11 +3,18 @@
     display: flex;
     justify-content: center; /* align horizontal */
     align-items: center; /* align vertical */
-
     height: calc(100vh - #{$borderWidth} * 2);
-
+    
     background-color: $darkRed;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    // background-image: url(assets/images/image22.jpg);
+    // background-image: url(assets/images/cradle-redborders.jpg);
+
     color: white;
+    box-shadow: 1px;
 
     border: solid $darkerRed;
     border-width: $borderWidth;
@@ -107,4 +114,11 @@
 .largeWhiteIcon {
   color: white;
   font-size: 200%;
+}
+
+.cradle1 {
+  background-image: url(assets/images/image22.jpg);
+}
+.cradle2 {
+  background-image: url(assets/images/cradle-redborders.jpg);
 }

@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatCardModule } from '@angular/material/card';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
@@ -14,7 +15,11 @@ import { ScrollViewComponent } from './scroll-view/scroll-view.component';
 import { MainComponent } from './main/main.component';
 import { IAKapitalismeComponent } from './subjects/i-a-kapitalisme/i-a-kapitalisme.component';
 import { SubjectComponent } from './subjects/subject.component';
-import { IBSocialistischAlternatiefComponent } from './subjects/i-b-socialistisch-alternatief/i-b-socialistisch-alternatief';
+import { TemplateDirective } from './directives/template.directive';
+import { GelijkheidComponent } from './subjects/i-b-socialistisch-alternatief/gelijkheid.component';
+import { NationalisatieComponent } from './subjects/i-b-socialistisch-alternatief/nationalisatie.component';
+import { InleidingBComponent } from './subjects/i-b-socialistisch-alternatief/inleiding-b.component';
+import { IBSocialistischAlternatiefComponent } from './subjects/i-b-socialistisch-alternatief/i-b-socialistisch-alternatief.component';
 
 const appRoutes: Routes = [
   {
@@ -29,6 +34,7 @@ const appRoutes: Routes = [
     path: 'B',
     component: IBSocialistischAlternatiefComponent
   },
+
   { path: '**', component: MainComponent }
 ];
 
@@ -37,9 +43,15 @@ const appRoutes: Routes = [
     AppComponent,
     ScrollViewComponent,
     MainComponent,
+    SubjectComponent,
+    TemplateDirective,
+    // A
     IAKapitalismeComponent,
+    // B
     IBSocialistischAlternatiefComponent,
-    SubjectComponent
+    InleidingBComponent,
+    GelijkheidComponent,
+    NationalisatieComponent
   ],
   imports: [
     BrowserModule,
@@ -52,6 +64,7 @@ const appRoutes: Routes = [
     // material
     MatExpansionModule,
     MatCardModule,
+    MatTooltipModule,
     // other imports here
     FontAwesomeModule
   ],

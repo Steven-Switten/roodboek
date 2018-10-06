@@ -3,8 +3,9 @@
         <div class="text subject__content ">
             <br />
             <mat-card>
-                <div [innerHTML]="introduction"></div>
-                <br>
+                <ng-template *ngTemplateOutlet="introductionTemplate">
+
+                </ng-template>
             </mat-card>
             <mat-accordion multi="true">
                 <mat-expansion-panel class="panel" *ngFor="let chapter of chapters">
@@ -14,6 +15,9 @@
                         </mat-panel-title>
                     </mat-expansion-panel-header>
                     <div [innerHTML]="chapter.innerHtml"></div>
+                    <ng-template *ngTemplateOutlet="chapterTemplates[chapter.title]">
+
+                    </ng-template>
                 </mat-expansion-panel>
             </mat-accordion>
             <div class="flex flex-row subject__footer">

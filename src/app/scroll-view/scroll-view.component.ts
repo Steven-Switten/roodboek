@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 /*
-  <kpd-scroll-view>
+  <app-scroll-view>
     <div header
       ... // Fixed div at top
     </div>
@@ -11,7 +11,7 @@ import { Component, Input } from '@angular/core';
     <div footer>
       ... // Fixed div at bottom
     </div>
-  </kpd-scroll-view>
+  </app-scroll-view>
  */
 
 @Component({

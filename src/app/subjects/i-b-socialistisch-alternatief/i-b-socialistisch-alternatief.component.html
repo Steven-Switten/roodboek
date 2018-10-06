@@ -1,0 +1,11 @@
+<app-subject [chapters]="chapters" [next]="next" [previous]="previous">
+    <ng-template [appTemplate]="'introduction'">
+        <app-inleiding-b></app-inleiding-b>
+    </ng-template>
+    <ng-template [appTemplate]="chapters[0].title">
+        <app-gelijkheid></app-gelijkheid>
+    </ng-template>
+    <ng-template [appTemplate]="chapters[1].title">
+        <app-nationalisatie></app-nationalisatie>
+    </ng-template>
+</app-subject>

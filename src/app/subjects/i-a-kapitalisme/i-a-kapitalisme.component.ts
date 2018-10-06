@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 
 class Chapter {
   title: string;
@@ -16,50 +15,24 @@ export class IAKapitalismeComponent implements OnInit {
   chapters: any[] = [];
   next = { text: 'Het Socialistisch alternatief', route: '/B' };
 
-  constructor(private http: HttpClient) {}
+  constructor() {}
 
   ngOnInit(): void {
-    this.http
-      .get(`assets/I/A/inleiding.html`, { responseType: 'text' })
-      .subscribe(result => {
-        this.iAinleiding = result;
-      });
+    const chapter1 = new Chapter();
+    chapter1.title = '1. Een wereldwijd toenemende kloof van arm en rijk';
 
-    this.http
-      .get(`assets/I/A/1-kloof.html`, { responseType: 'text' })
-      .subscribe((result: string) => {
-        const chapter = new Chapter();
-        chapter.title = '1. Een wereldwijd toenemende kloof van arm en rijk';
-        chapter.innerHtml = result;
-        this.chapters[0] = chapter;
-      });
+    const chapter2 = new Chapter();
+    chapter2.title =
+      '2. De vrije markt... van de internationale monopolievorming';
 
-    this.http
-      .get(`assets/I/A/2-vrijemarkt.html`, { responseType: 'text' })
-      .subscribe(result => {
-        const chapter = new Chapter();
-        chapter.title =
-          '2. De vrije markt... van de internationale monopolievorming';
-        chapter.innerHtml = result;
-        this.chapters[1] = chapter;
-      });
+    const chapter3 = new Chapter();
+    chapter3.title = '3. De economische macht in België: waar zit het geld?';
 
-    this.http
-      .get(`assets/I/A/3-economisch.html`, { responseType: 'text' })
-      .subscribe(result => {
-        const chapter = new Chapter();
-        chapter.title = '3. De economische macht in België: waar zit het geld?';
-        chapter.innerHtml = result;
-        this.chapters[2] = chapter;
-      });
-
-    this.http
-      .get(`assets/I/A/4-transfer.html`, { responseType: 'text' })
-      .subscribe(result => {
-        const chapter = new Chapter();
-        chapter.title = '4. Een transfer van werkenden naar rijken';
-        chapter.innerHtml = result;
-        this.chapters[3] = chapter;
-      });
+    const chapter4 = new Chapter();
+    chapter4.title = '4. Een transfer van werkenden naar rijken';
+    this.chapters.push(chapter1);
+    this.chapters.push(chapter2);
+    this.chapters.push(chapter3);
+    this.chapters.push(chapter4);
   }
 }

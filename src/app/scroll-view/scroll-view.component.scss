@@ -19,7 +19,7 @@
   }
 
   &__content {
-    overflow-y: auto;
+    overflow-y: scroll;
     overflow-x: hidden;
     grid-area: content;
     position: relative;
