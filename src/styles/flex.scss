@@ -11,6 +11,14 @@
   align-items: center;
 }
 
+.flex-align-items-left {
+  align-items: flex-start;
+}
+
+.flex-align-items-right {
+  align-items: flex-end;
+}
+
 .flex-space-between {
   justify-content: space-between;
 }

@@ -7,6 +7,7 @@ import {
 } from '@angular/core';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
 import { TemplateDirective } from '../directives/template.directive';
 import { getTemplateByName } from '../directives/template.helper';
 @Component({
@@ -16,6 +17,7 @@ import { getTemplateByName } from '../directives/template.helper';
 export class SubjectComponent implements AfterContentInit {
   faChevronRight = faChevronRight;
   faChevronLeft = faChevronLeft;
+  faHome = faHome;
 
   @Input()
   previous: { route: string; text: string } = { route: undefined, text: '' };

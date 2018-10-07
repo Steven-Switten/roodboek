@@ -33,6 +33,7 @@
     margin: $em-8 0;
     a,
     fa-icon {
+      font-size: 90%;
       color: black;
       text-decoration: none;
       transition: 0.2s;
@@ -40,6 +41,9 @@
         color: slategrey;
         transition: 0.2s;
       }
+    }
+    .footer__icon {
+      margin: 0 10px;
     }
   }
 }
@@ -53,4 +57,16 @@
   top: -40px;
   right: 0;
   z-index: 200;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
 }
