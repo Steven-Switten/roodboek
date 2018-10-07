@@ -13,9 +13,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppComponent } from './app.component';
 import { ScrollViewComponent } from './scroll-view/scroll-view.component';
 import { MainComponent } from './main/main.component';
-import { IAKapitalismeComponent } from './subjects/i-a-kapitalisme/i-a-kapitalisme.component';
 import { SubjectComponent } from './subjects/subject.component';
 import { TemplateDirective } from './directives/template.directive';
+
+import { IAKapitalismeComponent } from './subjects/i-a-kapitalisme/i-a-kapitalisme.component';
 import { GelijkheidComponent } from './subjects/i-b-socialistisch-alternatief/gelijkheid.component';
 import { NationalisatieComponent } from './subjects/i-b-socialistisch-alternatief/nationalisatie.component';
 import { InleidingBComponent } from './subjects/i-b-socialistisch-alternatief/inleiding-b.component';
@@ -33,6 +34,10 @@ import { B4OnthoudingComponent } from './subjects/ii-b/b-4-onthouding.component'
 import { B7OplossingenComponent } from './subjects/ii-b/b-7-oplossingen.component';
 import { B5AntiIndustrialismeComponent } from './subjects/ii-b/b-5-anti-industrialisme.component';
 import { B6VervuilingVanVoedingComponent } from './subjects/ii-b/b-6-vervuiling-van-voeding.component';
+import { IICPolitiekeKaderComponent } from './subjects/ii-c/ii-c-politieke-kader.component';
+import { C3PersComponent } from './subjects/ii-c/c-3-pers.component';
+import { C1StructurenComponent } from './subjects/ii-c/c-1-structuren.component';
+import { C2MandatarissenComponent } from './subjects/ii-c/c-2-mandatarissen.component';
 
 const appRoutes: Routes = [
   {
@@ -54,6 +59,10 @@ const appRoutes: Routes = [
   {
     path: 'D',
     component: IIBDuurzameEconomieComponent
+  },
+  {
+    path: 'E',
+    component: IICPolitiekeKaderComponent
   },
 
   { path: '**', component: MainComponent }
@@ -87,8 +96,13 @@ const appRoutes: Routes = [
     B4OnthoudingComponent,
     B5AntiIndustrialismeComponent,
     B6VervuilingVanVoedingComponent,
-    B7OplossingenComponent
+    B7OplossingenComponent,
     // E
+    IICPolitiekeKaderComponent,
+    C1StructurenComponent,
+    C2MandatarissenComponent,
+    C3PersComponent
+    // F
   ],
   imports: [
     BrowserModule,

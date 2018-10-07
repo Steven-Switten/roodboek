@@ -1,17 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-
-class Chapter {
-  title: string;
-  innerHtml: string;
-}
+import { Chapter } from '../chapter';
 
 @Component({
   selector: 'app-ii-b-duurzame-economie',
   templateUrl: './ii-b-duurzame-economie.component.html'
 })
 export class IIBDuurzameEconomieComponent implements OnInit {
-  iAinleiding: string;
-
   chapters: any[] = [];
   next = { text: 'Het politieke kader', route: '/E' };
   previous = { text: 'Economische democratie', route: '/C' };

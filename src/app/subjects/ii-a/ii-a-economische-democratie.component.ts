@@ -1,17 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-
-class Chapter {
-  title: string;
-  innerHtml: string;
-}
+import { Chapter } from '../chapter';
 
 @Component({
   selector: 'app-ii-a-economische-democratie',
   templateUrl: './ii-a-economische-democratie.component.html'
 })
 export class IIAEconomischeDemocratieComponent implements OnInit {
-  iAinleiding: string;
-
   chapters: any[] = [];
   next = { text: 'De duurzame economie', route: '/D' };
   previous = { text: 'Het Socialistisch alternatief', route: '/B' };

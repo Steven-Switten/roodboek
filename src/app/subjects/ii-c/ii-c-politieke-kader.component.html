@@ -1,0 +1,17 @@
+<app-subject [chapters]="chapters" [next]="next" [previous]="previous">
+    <ng-template [appTemplate]="'introduction'">
+        <div>
+            <h2 class="subject__title">Het politieke kader: democratisering is nodig</h2>
+        </div>
+    </ng-template>
+    <ng-template [appTemplate]="chapters[0].title">
+        <app-c-1-structuren></app-c-1-structuren>
+    </ng-template>
+    <ng-template [appTemplate]="chapters[1].title">
+        <app-c-2-mandatarissen>
+        </app-c-2-mandatarissen>
+    </ng-template>
+    <ng-template [appTemplate]="chapters[2].title">
+        <app-c-3-pers></app-c-3-pers>
+    </ng-template>
+</app-subject>
