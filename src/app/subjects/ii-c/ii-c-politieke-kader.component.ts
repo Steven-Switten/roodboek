@@ -25,7 +25,5 @@ export class IICPolitiekeKaderComponent implements OnInit {
     this.chapters.push(chapter1);
     this.chapters.push(chapter2);
     this.chapters.push(chapter3);
-
-    console.log(this.chapters);
   }
 }

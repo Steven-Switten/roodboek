@@ -1,0 +1,18 @@
+<app-subject [chapters]="chapters" [next]="next" [previous]="previous">
+    <ng-template [appTemplate]="'introduction'">
+        <div>
+            <h2 class="subject__title">De gezondheidszorg</h2>
+        </div>
+    </ng-template>
+    <ng-template [appTemplate]="chapters[0].title">
+        <app-e-1-gratis></app-e-1-gratis>
+    </ng-template>
+    <ng-template [appTemplate]="chapters[1].title">
+        <app-e-2-farma>
+        </app-e-2-farma>
+    </ng-template>
+    <ng-template [appTemplate]="chapters[2].title">
+        <app-e-3-ziekte>
+        </app-e-3-ziekte>
+    </ng-template>
+</app-subject>

@@ -21,7 +21,5 @@ export class IIDFiscaliteitComponent implements OnInit {
 
     this.chapters.push(chapter1);
     this.chapters.push(chapter2);
-
-    console.log(this.chapters);
   }
 }
