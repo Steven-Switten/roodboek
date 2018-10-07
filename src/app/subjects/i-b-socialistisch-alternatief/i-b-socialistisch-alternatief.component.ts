@@ -14,7 +14,7 @@ export class IBSocialistischAlternatiefComponent implements OnInit {
 
   chapters: any[] = [];
   next = { text: 'Economische Democratie', route: '/C' };
-  previous = { text: 'Het Socialistisch alternatief', route: '/A' };
+  previous = { text: 'Socialist in een kapitalistische wereld', route: '/A' };
 
   constructor() {}
 

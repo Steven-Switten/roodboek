@@ -1,0 +1,19 @@
+<app-subject [chapters]="chapters" [next]="next" [previous]="previous">
+    <ng-template [appTemplate]="'introduction'">
+        <div>
+            <h2 class="subject__title">Economische democratie</h2>
+        </div>
+    </ng-template>
+    <ng-template [appTemplate]="chapters[0].title">
+        <app-alternatief></app-alternatief>
+    </ng-template>
+    <ng-template [appTemplate]="chapters[1].title">
+        <app-gemeenschapsbezit></app-gemeenschapsbezit>
+    </ng-template>
+    <ng-template [appTemplate]="chapters[2].title">
+        <app-werknemerscontrole></app-werknemerscontrole>
+    </ng-template>
+    <ng-template [appTemplate]="chapters[3].title">
+        <app-democratische-planning></app-democratische-planning>
+    </ng-template>
+</app-subject>

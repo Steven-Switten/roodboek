@@ -16,7 +16,7 @@ platformBrowserDynamic()
   .catch(err => console.log(err));
 
 export function checkValidBrowser(element: HTMLElement) {
-  var isIE = /*@cc_on!@*/ false || !!document.documentMode;
+  const isIE = /*@cc_on!@*/ false || !!document['documentMode'];
   if (isIE) {
     element.innerHTML = `
     <div >

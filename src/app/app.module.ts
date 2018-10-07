@@ -20,6 +20,11 @@ import { GelijkheidComponent } from './subjects/i-b-socialistisch-alternatief/ge
 import { NationalisatieComponent } from './subjects/i-b-socialistisch-alternatief/nationalisatie.component';
 import { InleidingBComponent } from './subjects/i-b-socialistisch-alternatief/inleiding-b.component';
 import { IBSocialistischAlternatiefComponent } from './subjects/i-b-socialistisch-alternatief/i-b-socialistisch-alternatief.component';
+import { GemeenschapsbezitComponent } from './subjects/ii-a/a-2-gemeenschapsbezit.component';
+import { WerknemerscontroleComponent } from './subjects/ii-a/a-3-werknemerscontrole.component';
+import { AlternatiefComponent } from './subjects/ii-a/a-1-alternatief.component';
+import { DemocratischePlanningComponent } from './subjects/ii-a/a-4-democratische-planning.component';
+import { IIAEconomischeDemocratieComponent } from './subjects/ii-a/ii-a-economische-democratie.component';
 
 const appRoutes: Routes = [
   {
@@ -33,6 +38,10 @@ const appRoutes: Routes = [
   {
     path: 'B',
     component: IBSocialistischAlternatiefComponent
+  },
+  {
+    path: 'C',
+    component: IIAEconomischeDemocratieComponent
   },
 
   { path: '**', component: MainComponent }
@@ -51,7 +60,13 @@ const appRoutes: Routes = [
     IBSocialistischAlternatiefComponent,
     InleidingBComponent,
     GelijkheidComponent,
-    NationalisatieComponent
+    NationalisatieComponent,
+    // C
+    IIAEconomischeDemocratieComponent,
+    AlternatiefComponent,
+    GemeenschapsbezitComponent,
+    WerknemerscontroleComponent,
+    DemocratischePlanningComponent
   ],
   imports: [
     BrowserModule,

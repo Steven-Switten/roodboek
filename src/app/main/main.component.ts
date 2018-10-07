@@ -58,42 +58,50 @@ export class MainComponent implements OnInit {
     this.tiles.push({
       text: 'Economische democratie',
       color: '#f01f4d',
-      icon: faHandshake
+      icon: faHandshake,
+      link: 'C'
     });
     this.tiles.push({
       text: 'De duurzame economie',
       color: '#b8d277',
-      icon: faLeaf
+      icon: faLeaf,
+      link: 'D'
     });
     this.tiles.push({
       text: 'Het politieke kader',
       color: '#fc9260',
-      icon: faUniversity
+      icon: faUniversity,
+      link: 'E'
     });
     this.tiles.push({
       text: 'Fiscaliteit: haal het geld waar het zit',
       color: '#88aa55',
-      icon: faMoneyBillWave
+      icon: faMoneyBillWave,
+      link: 'F'
     });
     this.tiles.push({
       text: 'De gezondheidszorg',
       color: '#2b7191',
-      icon: faHeartbeat
+      icon: faHeartbeat,
+      link: 'G'
     });
     this.tiles.push({
       text: 'De vergrijzing en de pensioenen',
       color: '#e959a3',
-      icon: faHandHoldingHeart
+      icon: faHandHoldingHeart,
+      link: 'H'
     });
     this.tiles.push({
       text: 'Onderwijs',
       color: '#50d0de',
-      icon: faUserGraduate
+      icon: faUserGraduate,
+      link: 'I'
     });
     this.tiles.push({
       text: 'Internationaal',
       color: '#1e7060',
-      icon: faGlobeAfrica
+      icon: faGlobeAfrica,
+      link: 'J'
     });
     this.tiles.push({ text: 'Strategie', color: '#b369b1', icon: faBrain });
     this.tiles.push({ text: 'De partij', color: '#ee3030', icon: faHome });
