@@ -16,11 +16,11 @@ import { MainComponent } from './main/main.component';
 import { SubjectComponent } from './subjects/subject.component';
 import { TemplateDirective } from './directives/template.directive';
 
-import { IAKapitalismeComponent } from './subjects/i-a-kapitalisme/i-a-kapitalisme.component';
-import { GelijkheidComponent } from './subjects/i-b-socialistisch-alternatief/gelijkheid.component';
-import { NationalisatieComponent } from './subjects/i-b-socialistisch-alternatief/nationalisatie.component';
-import { InleidingBComponent } from './subjects/i-b-socialistisch-alternatief/inleiding-b.component';
-import { IBSocialistischAlternatiefComponent } from './subjects/i-b-socialistisch-alternatief/i-b-socialistisch-alternatief.component';
+import { IAKapitalismeComponent } from './subjects/i-a/i-a-kapitalisme.component';
+import { GelijkheidComponent } from './subjects/i-b/gelijkheid.component';
+import { NationalisatieComponent } from './subjects/i-b/nationalisatie.component';
+import { InleidingBComponent } from './subjects/i-b/inleiding-b.component';
+import { IBSocialistischAlternatiefComponent } from './subjects/i-b/i-b-socialistisch-alternatief.component';
 import { GemeenschapsbezitComponent } from './subjects/ii-a/a-2-gemeenschapsbezit.component';
 import { WerknemerscontroleComponent } from './subjects/ii-a/a-3-werknemerscontrole.component';
 import { AlternatiefComponent } from './subjects/ii-a/a-1-alternatief.component';
@@ -41,6 +41,10 @@ import { C2MandatarissenComponent } from './subjects/ii-c/c-2-mandatarissen.comp
 import { IIDFiscaliteitComponent } from './subjects/ii-d/ii-d-fiscaliteit.component';
 import { D2TaxshiftComponent } from './subjects/ii-d/d-2-taxshift.component';
 import { D1FiscaleFraudeComponent } from './subjects/ii-d/d-1-fiscale-fraude.component';
+import { IIEGezondheidszorgComponent } from './subjects/ii-e/ii-e-gezondheidszorg.component';
+import { E2FarmaComponent } from './subjects/ii-e/e-2-farma.component';
+import { E3ZiekteComponent } from './subjects/ii-e/e-3-ziekte.component';
+import { E1GratisComponent } from './subjects/ii-e/e-1-gratis.component';
 
 const appRoutes: Routes = [
   {
@@ -70,6 +74,10 @@ const appRoutes: Routes = [
   {
     path: 'F',
     component: IIDFiscaliteitComponent
+  },
+  {
+    path: 'G',
+    component: IIEGezondheidszorgComponent
   },
   { path: '**', component: MainComponent }
 ];
@@ -111,8 +119,12 @@ const appRoutes: Routes = [
     // F
     IIDFiscaliteitComponent,
     D1FiscaleFraudeComponent,
-    D2TaxshiftComponent
+    D2TaxshiftComponent,
     // G
+    IIEGezondheidszorgComponent,
+    E1GratisComponent,
+    E2FarmaComponent,
+    E3ZiekteComponent
   ],
   imports: [
     BrowserModule,
