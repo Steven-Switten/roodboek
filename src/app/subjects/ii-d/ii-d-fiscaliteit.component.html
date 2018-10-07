@@ -1,0 +1,14 @@
+<app-subject [chapters]="chapters" [next]="next" [previous]="previous">
+    <ng-template [appTemplate]="'introduction'">
+        <div>
+            <h2 class="subject__title">Fiscaliteit: haal het geld waar het zit</h2>
+        </div>
+    </ng-template>
+    <ng-template [appTemplate]="chapters[0].title">
+        <app-d-1-fiscale-fraude></app-d-1-fiscale-fraude>
+    </ng-template>
+    <ng-template [appTemplate]="chapters[1].title">
+        <app-d-2-taxshift>
+        </app-d-2-taxshift>
+    </ng-template>
+</app-subject>

@@ -38,6 +38,9 @@ import { IICPolitiekeKaderComponent } from './subjects/ii-c/ii-c-politieke-kader
 import { C3PersComponent } from './subjects/ii-c/c-3-pers.component';
 import { C1StructurenComponent } from './subjects/ii-c/c-1-structuren.component';
 import { C2MandatarissenComponent } from './subjects/ii-c/c-2-mandatarissen.component';
+import { IIDFiscaliteitComponent } from './subjects/ii-d/ii-d-fiscaliteit.component';
+import { D2TaxshiftComponent } from './subjects/ii-d/d-2-taxshift.component';
+import { D1FiscaleFraudeComponent } from './subjects/ii-d/d-1-fiscale-fraude.component';
 
 const appRoutes: Routes = [
   {
@@ -64,7 +67,10 @@ const appRoutes: Routes = [
     path: 'E',
     component: IICPolitiekeKaderComponent
   },
-
+  {
+    path: 'F',
+    component: IIDFiscaliteitComponent
+  },
   { path: '**', component: MainComponent }
 ];
 
@@ -101,8 +107,12 @@ const appRoutes: Routes = [
     IICPolitiekeKaderComponent,
     C1StructurenComponent,
     C2MandatarissenComponent,
-    C3PersComponent
+    C3PersComponent,
     // F
+    IIDFiscaliteitComponent,
+    D1FiscaleFraudeComponent,
+    D2TaxshiftComponent
+    // G
   ],
   imports: [
     BrowserModule,
