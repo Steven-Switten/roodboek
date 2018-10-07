@@ -25,6 +25,14 @@ import { WerknemerscontroleComponent } from './subjects/ii-a/a-3-werknemerscontr
 import { AlternatiefComponent } from './subjects/ii-a/a-1-alternatief.component';
 import { DemocratischePlanningComponent } from './subjects/ii-a/a-4-democratische-planning.component';
 import { IIAEconomischeDemocratieComponent } from './subjects/ii-a/ii-a-economische-democratie.component';
+import { IIBDuurzameEconomieComponent } from './subjects/ii-b/ii-b-duurzame-economie.component';
+import { B1InleidingComponent } from './subjects/ii-b/b-1-inleiding.component';
+import { B2DuurzameEconomieComponent } from './subjects/ii-b/b-2-duurzame-economie.component';
+import { B3EmissiehandelComponent } from './subjects/ii-b/b-3-emissiehandel.component';
+import { B4OnthoudingComponent } from './subjects/ii-b/b-4-onthouding.component';
+import { B7OplossingenComponent } from './subjects/ii-b/b-7-oplossingen.component';
+import { B5AntiIndustrialismeComponent } from './subjects/ii-b/b-5-anti-industrialisme.component';
+import { B6VervuilingVanVoedingComponent } from './subjects/ii-b/b-6-vervuiling-van-voeding.component';
 
 const appRoutes: Routes = [
   {
@@ -42,6 +50,10 @@ const appRoutes: Routes = [
   {
     path: 'C',
     component: IIAEconomischeDemocratieComponent
+  },
+  {
+    path: 'D',
+    component: IIBDuurzameEconomieComponent
   },
 
   { path: '**', component: MainComponent }
@@ -66,7 +78,17 @@ const appRoutes: Routes = [
     AlternatiefComponent,
     GemeenschapsbezitComponent,
     WerknemerscontroleComponent,
-    DemocratischePlanningComponent
+    DemocratischePlanningComponent,
+    // D
+    IIBDuurzameEconomieComponent,
+    B1InleidingComponent,
+    B2DuurzameEconomieComponent,
+    B3EmissiehandelComponent,
+    B4OnthoudingComponent,
+    B5AntiIndustrialismeComponent,
+    B6VervuilingVanVoedingComponent,
+    B7OplossingenComponent
+    // E
   ],
   imports: [
     BrowserModule,

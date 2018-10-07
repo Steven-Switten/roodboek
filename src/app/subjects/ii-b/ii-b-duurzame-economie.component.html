@@ -1,0 +1,29 @@
+<app-subject [chapters]="chapters" [next]="next" [previous]="previous">
+    <ng-template [appTemplate]="'introduction'">
+        <div>
+            <h2 class="subject__title">De duurzame economie</h2>
+        </div>
+    </ng-template>
+    <ng-template [appTemplate]="chapters[0].title">
+        <app-b-1-inleiding></app-b-1-inleiding>
+    </ng-template>
+    <ng-template [appTemplate]="chapters[1].title">
+        <app-b-2-duurzame-economie>
+        </app-b-2-duurzame-economie>
+    </ng-template>
+    <ng-template [appTemplate]="chapters[2].title">
+        <app-b-3-emissiehandel></app-b-3-emissiehandel>
+    </ng-template>
+    <ng-template [appTemplate]="chapters[3].title">
+        <app-b-4-onthouding></app-b-4-onthouding>
+    </ng-template>
+    <ng-template [appTemplate]="chapters[5].title">
+        <app-b-5-anti-industrialisme></app-b-5-anti-industrialisme>
+    </ng-template>
+    <ng-template [appTemplate]="chapters[4].title">
+        <app-b-6-vervuiling-van-voeding></app-b-6-vervuiling-van-voeding>
+    </ng-template>
+    <ng-template [appTemplate]="chapters[6].title">
+        <app-b-7-oplossingen></app-b-7-oplossingen>
+    </ng-template>
+</app-subject>
