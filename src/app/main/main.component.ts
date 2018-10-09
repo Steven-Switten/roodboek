@@ -103,8 +103,18 @@ export class MainComponent implements OnInit {
       icon: faGlobeAfrica,
       link: 'J'
     });
-    this.tiles.push({ text: 'Strategie', color: '#b369b1', icon: faBrain });
-    this.tiles.push({ text: 'De partij', color: '#ee3030', icon: faHome });
+    this.tiles.push({
+      text: 'Misdaad en Straf',
+      color: '#b369b1',
+      icon: faBrain,
+      link: 'K'
+    });
+    this.tiles.push({
+      text: 'Partij en Strategie',
+      color: '#ee3030',
+      icon: faHome,
+      link: 'L'
+    });
   }
 
   navigateToSubject(link: string) {

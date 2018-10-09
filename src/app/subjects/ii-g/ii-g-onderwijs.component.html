@@ -1,0 +1,24 @@
+<app-subject [chapters]="chapters" [next]="next" [previous]="previous">
+    <ng-template [appTemplate]="'introduction'">
+        <app-g-inleiding></app-g-inleiding>
+    </ng-template>
+    <ng-template [appTemplate]="chapters[0].title">
+        <app-g-1-onderwijs></app-g-1-onderwijs>
+    </ng-template>
+    <ng-template [appTemplate]="chapters[1].title">
+        <app-g-2-angelsaksisch>
+        </app-g-2-angelsaksisch>
+    </ng-template>
+    <ng-template [appTemplate]="chapters[2].title">
+        <app-g-3-fins></app-g-3-fins>
+    </ng-template>
+    <ng-template [appTemplate]="chapters[3].title">
+        <app-g-4-motivatie></app-g-4-motivatie>
+    </ng-template>
+    <ng-template [appTemplate]="chapters[4].title">
+        <app-g-5-secundair></app-g-5-secundair>
+    </ng-template>
+    <ng-template [appTemplate]="chapters[5].title">
+        <app-g-6-voorstellen></app-g-6-voorstellen>
+    </ng-template>
+</app-subject>

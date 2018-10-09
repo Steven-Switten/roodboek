@@ -1,0 +1,23 @@
+<app-subject [chapters]="chapters" [previous]="previous">
+    <ng-template [appTemplate]="'introduction'">
+        <div>
+            <h2 class="subject__title">Partij en Strategie</h2>
+        </div>
+    </ng-template>
+    <ng-template [appTemplate]="chapters[0].title">
+        <app-iii-1-regeringsdeelname></app-iii-1-regeringsdeelname>
+    </ng-template>
+    <ng-template [appTemplate]="chapters[1].title">
+        <app-iii-2-front>
+        </app-iii-2-front>
+    </ng-template>
+    <ng-template [appTemplate]="chapters[2].title">
+        <app-iii-3-politiek></app-iii-3-politiek>
+    </ng-template>
+    <ng-template [appTemplate]="chapters[3].title">
+        <app-iii-4-partij></app-iii-4-partij>
+    </ng-template>
+    <ng-template [appTemplate]="chapters[4].title">
+        <app-iii-5-veranderen></app-iii-5-veranderen>
+    </ng-template>
+</app-subject>

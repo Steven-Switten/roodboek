@@ -1,0 +1,18 @@
+<app-subject [chapters]="chapters" [next]="next" [previous]="previous">
+    <ng-template [appTemplate]="'introduction'">
+        <div>
+            <h2 class="subject__title">De vergrijzing en de pensioenen</h2>
+        </div>
+    </ng-template>
+    <ng-template [appTemplate]="chapters[0].title">
+        <app-f-1-eenheidspensioen></app-f-1-eenheidspensioen>
+    </ng-template>
+    <ng-template [appTemplate]="chapters[1].title">
+        <app-f-2-betaalbaarheid>
+        </app-f-2-betaalbaarheid>
+    </ng-template>
+    <ng-template [appTemplate]="chapters[2].title">
+        <app-f-3-vergrijzing>
+        </app-f-3-vergrijzing>
+    </ng-template>
+</app-subject>

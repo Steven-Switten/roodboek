@@ -1,17 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-
-class Chapter {
-  title: string;
-  innerHtml: string;
-}
+import { Chapter } from '../chapter';
 
 @Component({
   selector: 'app-i-a-kapitalisme',
   templateUrl: './i-a-kapitalisme.component.html'
 })
 export class IAKapitalismeComponent implements OnInit {
-  iAinleiding: string;
-
   chapters: any[] = [];
   next = { text: 'Het Socialistisch alternatief', route: '/B' };
 
@@ -26,10 +20,11 @@ export class IAKapitalismeComponent implements OnInit {
       '2. De vrije markt... van de internationale monopolievorming';
 
     const chapter3 = new Chapter();
-    chapter3.title = '3. De economische macht in België: waar zit het geld?';
+    chapter3.title = '3. De economische macht in België waar zit het geld';
 
     const chapter4 = new Chapter();
     chapter4.title = '4. Een transfer van werkenden naar rijken';
+
     this.chapters.push(chapter1);
     this.chapters.push(chapter2);
     this.chapters.push(chapter3);

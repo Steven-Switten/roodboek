@@ -1,0 +1,23 @@
+<app-subject [chapters]="chapters" [next]="next" [previous]="previous">
+    <ng-template [appTemplate]="'introduction'">
+        <div>
+            <h2 class="subject__title">Misdaad en Straf</h2>
+        </div>
+    </ng-template>
+    <ng-template [appTemplate]="chapters[0].title">
+        <app-i-1-veilig></app-i-1-veilig>
+    </ng-template>
+    <ng-template [appTemplate]="chapters[1].title">
+        <app-i-2-justitie>
+        </app-i-2-justitie>
+    </ng-template>
+    <ng-template [appTemplate]="chapters[2].title">
+        <app-i-3-schuld></app-i-3-schuld>
+    </ng-template>
+    <ng-template [appTemplate]="chapters[3].title">
+        <app-i-4-afkoopwet></app-i-4-afkoopwet>
+    </ng-template>
+    <ng-template [appTemplate]="chapters[4].title">
+        <app-i-5-gevangenis></app-i-5-gevangenis>
+    </ng-template>
+</app-subject>

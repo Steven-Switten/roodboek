@@ -21,7 +21,7 @@
                 </mat-accordion>
             </div>
             <div class="flex flex-row subject__footer">
-                <div class="flex-column flex-align-items-left">
+                <div class="flex-column flex-align-items-left" *ngIf="previous">
                     <div class="flex-row">
                         <a class="footer__icon" [routerLink]="previous.route">
                             <fa-icon [icon]="faChevronLeft" *ngIf="previous.route"></fa-icon>
@@ -33,11 +33,10 @@
                 </div>
                 <div class="flex-column flex-align-items-center">
                     <a class="text-center" routerLink="/">
-                        <!-- Overzicht -->
-                        <fa-icon style="font-size: 100%;" [icon]="faHome" *ngIf="next.route"></fa-icon>
+                        <fa-icon style="font-size: 100%;" [icon]="faHome"></fa-icon>
                     </a>
                 </div>
-                <div class="flex-column flex-align-items-right">
+                <div class="flex-column flex-align-items-right" *ngIf="next">
                     <div class="flex-row">
                         <a class="text-right" [routerLink]="next.route" replaceUrl="true">
                             {{next.text}}

@@ -1,0 +1,20 @@
+<app-subject [chapters]="chapters" [next]="next" [previous]="previous">
+    <ng-template [appTemplate]="'introduction'">
+        <div>
+            <h2 class="subject__title">Internationaal</h2>
+        </div>
+    </ng-template>
+    <ng-template [appTemplate]="chapters[0].title">
+        <app-h-1-europa></app-h-1-europa>
+    </ng-template>
+    <ng-template [appTemplate]="chapters[1].title">
+        <app-h-2-derdewereld>
+        </app-h-2-derdewereld>
+    </ng-template>
+    <ng-template [appTemplate]="chapters[2].title">
+        <app-h-3-oorlog></app-h-3-oorlog>
+    </ng-template>
+    <ng-template [appTemplate]="chapters[3].title">
+        <app-h-4-asiel></app-h-4-asiel>
+    </ng-template>
+</app-subject>
