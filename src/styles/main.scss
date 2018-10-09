@@ -90,23 +90,34 @@
     color: white !important;
     height: $tileWidthSm;
     width: $tileWidthSm;
-    font-size: $rem-7;
+
     transition: 0.3s;
+
+    font-size: $rem-5;
 
     @include mq-md {
       height: $tileWidthMd;
       width: $tileWidthMd;
+      font-size: $rem-6;
     }
 
     @include mq-lg {
       height: $tileWidthLg;
       width: $tileWidthLg;
+      font-size: $rem-7;
     }
 
     cursor: pointer;
 
     &:hover {
-      font-size: $rem * 7.7;
+      transition: 0.3s;
+      font-size: $rem * 5.5;
+      @include mq-md {
+        font-size: $rem * 6.8;
+      }
+      @include mq-lg {
+        font-size: $rem * 7.7;
+      }
       width: 110%;
       height: 110%;
       z-index: 100;
