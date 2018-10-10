@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { faMoneyBillWave } from '@fortawesome/free-solid-svg-icons';
 import { faUserGraduate } from '@fortawesome/free-solid-svg-icons';
@@ -13,13 +13,13 @@ import { faUsers } from '@fortawesome/free-solid-svg-icons';
 import { faHandshake } from '@fortawesome/free-solid-svg-icons';
 import { faBrain } from '@fortawesome/free-solid-svg-icons';
 
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html'
 })
-export class MainComponent implements OnInit {
+export class MainComponent implements OnInit, AfterViewInit {
   topTitle = 'Waarvoor wij staan';
   mainTitle = 'Ons Roodboek';
   subTitle = 'Naar links en dan vooruit!';
@@ -41,8 +41,8 @@ export class MainComponent implements OnInit {
   faBrain = faBrain;
 
   tiles: any[] = [];
-
-  constructor(private router: Router) {
+  fragment: string;
+  constructor(private router: Router, private route: ActivatedRoute) {
     this.tiles.push({
       text: 'Kritiek op het kapitalisme',
       color: '#2b7191',
@@ -117,11 +117,21 @@ export class MainComponent implements OnInit {
     });
   }
 
+  ngOnInit() {
+    this.route.fragment.subscribe(fragment => {
+      this.fragment = fragment;
+    });
+  }
+
+  ngAfterViewInit(): void {
+    try {
+      document.querySelector('#' + this.fragment).scrollIntoView();
+    } catch (e) {}
+  }
+
   navigateToSubject(link: string) {
     this.router.navigate([link]);
   }
-
-  ngOnInit() {}
 
   loremIpsum(): string {
     return `
