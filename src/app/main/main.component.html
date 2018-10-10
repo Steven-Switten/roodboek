@@ -1,15 +1,19 @@
 <app-scroll-view>
 	<div class="main" content>
-		<div class="main__top ">
-			<div class="flex-column flex-align-items-center">
-				<h3 class="flex-row">{{topTitle}}</h3>
-				<h1 class="flex-row">
-					{{mainTitle}}
-				</h1>
-				<h3 class="flex-row">{{subTitle}}</h3>
-				<a class="flex-row" href="/#details">
-					<fa-icon [icon]="faChevronDown" class="largeWhiteIcon"></fa-icon>
-				</a>
+		<div class="main__top">
+			<div class="main__top__inside">
+				<div class="flex-row" style="margin-top: 50px">
+					<div class="flex-column flex-align-items-center">
+						<h3 class="flex-row">{{topTitle}}</h3>
+						<h1 class="flex-row">
+							{{mainTitle}}
+						</h1>
+						<h3 class="flex-row">{{subTitle}}</h3>
+						<a class="flex-row" href="/#details">
+							<fa-icon [icon]="faChevronDown" class="largeIcon"></fa-icon>
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="main__bottom" id="details">
@@ -26,7 +30,7 @@
 				</mat-card>
 				<div class="tiles">
 					<div *ngFor="let tile of tiles" class="tile flex-column" [ngStyle]="{'background': tile.color}" (click)="navigateToSubject(tile.link)">
-						<fa-icon [icon]="tile.icon" class="flex-row largeWhiteIcon"></fa-icon>
+						<fa-icon [icon]="tile.icon" class="flex-row largeIcon"></fa-icon>
 						<br />
 						<span class="flex-row">{{tile.text}}</span>
 					</div>

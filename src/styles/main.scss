@@ -2,23 +2,53 @@
   &__top {
     display: flex;
     justify-content: center; /* align horizontal */
-    align-items: center; /* align vertical */
+    // align-items: center; /* align vertical */
     height: calc(100vh - #{$borderWidth} * 2);
 
-    background-color: $darkRed;
+    h1,
+    h3,
+    a {
+      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
 
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    // background-image: url(assets/images/image22.jpg);
-    // background-image: url(assets/images/cradle-redborders.jpg);
+    h3 {
+      font-size: 1.6rem;
+    }
 
-    color: white;
-    box-shadow: 1px;
+    h1 {
+      font-size: 3rem;
+    }
 
     border: solid $darkerRed;
     border-width: $borderWidth;
     border-top: none;
+    position: relative;
+    color: white;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      @media screen and (orientation: portrait) {
+        background-image: url(assets/images/cradle/newtons-cradle-vertical.jpg);
+      }
+      @media screen and (orientation: landscape) {
+        background-image: url(assets/images/cradle/balance4.jpg);
+      }
+      // filter: brightness(80%);
+      // filter: brightness(110%);
+    }
+
+    &__inside {
+      /* This will make it stack on top of the ::before */
+      position: relative;
+    }
   }
 
   &__bottom {
@@ -126,14 +156,7 @@
   }
 }
 
-.largeWhiteIcon {
+.largeIcon {
   color: white;
   font-size: 200%;
-}
-
-.cradle1 {
-  background-image: url(assets/images/image22.jpg);
-}
-.cradle2 {
-  background-image: url(assets/images/cradle-redborders.jpg);
 }
