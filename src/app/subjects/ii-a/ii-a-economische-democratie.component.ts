@@ -15,10 +15,10 @@ export class IIAEconomischeDemocratieComponent implements OnInit {
   ngOnInit(): void {
     const chapter1 = new Chapter();
     chapter1.title =
-      '1. Een alternatief voor de crisis: Arbeidsduurvermindering';
+      '1. Een alternatief voor de crisis: Arbeidsduurvermindering!';
 
     const chapter2 = new Chapter();
-    chapter2.title = '2. Gemeenschapsbezit voor een openbare bank';
+    chapter2.title = '2. Gemeenschapsbezit: voor een openbare bank';
 
     const chapter3 = new Chapter();
     chapter3.title = '3. Werknemerscontrole en zelfbeheer';

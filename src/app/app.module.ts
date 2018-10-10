@@ -82,12 +82,16 @@ import { I2AsielComponent } from './subjects/ii-i/i-2-justitie.component';
 import { I3SchuldComponent } from './subjects/ii-i/i-3-schuld.component';
 import { I4AfkoopwetComponent } from './subjects/ii-i/i-4-afkoopwet.component';
 import { I5GevangenisComponent } from './subjects/ii-i/i-5-gevangenis.component';
+
 import { IIIPartijComponent } from './subjects/iii/iii-partij.component';
 import { III1RegeringsdeelnameComponent } from './subjects/iii/iii-1-regeringsdeelname.component';
 import { III2FrontComponent } from './subjects/iii/iii-2-front.component';
 import { III3PolitiekComponent } from './subjects/iii/iii-3-politiek.component';
 import { III4PartijComponent } from './subjects/iii/iii-4-partij.component';
 import { III5VeranderenComponent } from './subjects/iii/iii-5-veranderen.component';
+import { I6ArbeidswetgevingComponent } from './subjects/ii-i/i-6-arbeidswetgeving.component';
+import { I7ScheidingComponent } from './subjects/ii-i/i-7-scheiding.component';
+import { I8BesluitComponent } from './subjects/ii-i/i-8-besluit.component';
 
 const appRoutes: Routes = [
   {
@@ -220,6 +224,9 @@ const appRoutes: Routes = [
     I3SchuldComponent,
     I4AfkoopwetComponent,
     I5GevangenisComponent,
+    I6ArbeidswetgevingComponent,
+    I7ScheidingComponent,
+    I8BesluitComponent,
     // L
     IIIPartijComponent,
     III1RegeringsdeelnameComponent,

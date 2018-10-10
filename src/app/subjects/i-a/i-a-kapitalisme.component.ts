@@ -20,7 +20,7 @@ export class IAKapitalismeComponent implements OnInit {
       '2. De vrije markt... van de internationale monopolievorming';
 
     const chapter3 = new Chapter();
-    chapter3.title = '3. De economische macht in België waar zit het geld';
+    chapter3.title = '3. De economische macht in België: waar zit het geld?';
 
     const chapter4 = new Chapter();
     chapter4.title = '4. Een transfer van werkenden naar rijken';

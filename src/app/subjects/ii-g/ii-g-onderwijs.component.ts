@@ -14,21 +14,21 @@ export class IIGOnderwijsComponent implements OnInit {
 
   ngOnInit(): void {
     const chapter1 = new Chapter();
-    chapter1.title = '1. Onderwijs in België goed, maar niet voor iedereen';
+    chapter1.title = '1. Onderwijs in België: goed, maar niet voor iedereen';
 
     const chapter2 = new Chapter();
     chapter2.title =
-      '2. Angelsaksisch model de American Dream nastreven in een wereld die sterk is veranderd';
+      '2. Angelsaksisch model: de American Dream nastreven in een wereld die sterk is veranderd';
 
     const chapter3 = new Chapter();
     chapter3.title =
-      '3. Het Fins model beginnen bij het basisonderwijs om tot gelijkheid te komen';
+      '3. Het Fins model: beginnen bij het basisonderwijs om tot gelijkheid te komen';
 
     const chapter4 = new Chapter();
     chapter4.title = '4. Motivatie, creativiteit en technologie';
 
     const chapter5 = new Chapter();
-    chapter5.title = '5. Wat met het (hoger) secundair onderwijs';
+    chapter5.title = '5. Wat met het (hoger) secundair onderwijs?';
 
     const chapter6 = new Chapter();
     chapter6.title = '6. Voorstellen';

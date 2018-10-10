@@ -17,7 +17,7 @@ export class IIHInternationaalComponent implements OnInit {
     chapter1.title = '1. Europa';
 
     const chapter2 = new Chapter();
-    chapter2.title = '2. De Derde Wereld ontwikkelingssamenwerking';
+    chapter2.title = '2. De Derde Wereld: ontwikkelingssamenwerking';
 
     const chapter3 = new Chapter();
     chapter3.title = '3. Oorlog en Vrede';
