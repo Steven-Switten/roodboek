@@ -3,6 +3,9 @@
   min-height: calc(100vh - #{$borderWidth} * 2);
 
   border: solid $darkerRed;
+  @media screen and (orientation: portrait) {
+    border: none;
+  }
   border-width: $borderWidth;
   border-top: none;
 

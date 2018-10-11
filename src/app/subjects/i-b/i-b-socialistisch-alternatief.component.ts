@@ -19,7 +19,15 @@ export class IBSocialistischAlternatiefComponent implements OnInit {
     const chapter2 = new Chapter();
     chapter2.title = '2. Gelijkheid';
 
+    const chapter3 = new Chapter();
+    chapter3.title = '3. Zelfbeheer';
+
+    const chapter4 = new Chapter();
+    chapter4.title = '4. Secularisme';
+
     this.chapters.push(chapter1);
     this.chapters.push(chapter2);
+    this.chapters.push(chapter3);
+    this.chapters.push(chapter4);
   }
 }

@@ -3,7 +3,6 @@
     display: flex;
     justify-content: center; /* align horizontal */
     // align-items: center; /* align vertical */
-    height: calc(100vh - #{$borderWidth} * 2);
 
     h1,
     h3,
@@ -19,7 +18,8 @@
       font-size: 3rem;
     }
 
-    border: solid $darkerRed;
+    height: calc(100vh - #{$borderWidth});
+    // border: solid $darkerRed;
     border-width: $borderWidth;
     border-top: none;
     position: relative;
@@ -93,12 +93,14 @@
   $tileWidthSm: 140px;
 
   display: grid;
-
+  /* autoprefixer: off */
   grid-template-columns: repeat(auto-fit, #{$tileWidthSm});
   @include mq-md {
+    /* autoprefixer: off */
     grid-template-columns: repeat(auto-fit, #{$tileWidthMd});
   }
   @include mq-lg {
+    /* autoprefixer: off */
     grid-template-columns: repeat(auto-fit, #{$tileWidthLg});
   }
 

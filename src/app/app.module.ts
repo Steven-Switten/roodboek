@@ -23,9 +23,12 @@ import { A3EconomischComponent } from './subjects/i-a/a-3-economisch.component';
 import { A4TransferComponent } from './subjects/i-a/a-4-transfer.component';
 import { AInleidingComponent } from './subjects/i-a/a-inleiding.component';
 
-import { GelijkheidComponent } from './subjects/i-b/gelijkheid.component';
-import { NationalisatieComponent } from './subjects/i-b/nationalisatie.component';
+import { B2GelijkheidComponent } from './subjects/i-b/b-2-gelijkheid.component';
+import { B1NationalisatieComponent } from './subjects/i-b/b-1-nationalisatie.component';
 import { InleidingBComponent } from './subjects/i-b/inleiding-b.component';
+import { B3ZelfbeheerComponent } from './subjects/i-b/b-3-zelfbeheer.component';
+import { B4SecularismeComponent } from './subjects/i-b/b-4-secularisme.component';
+
 import { IBSocialistischAlternatiefComponent } from './subjects/i-b/i-b-socialistisch-alternatief.component';
 import { GemeenschapsbezitComponent } from './subjects/ii-a/a-2-gemeenschapsbezit.component';
 import { WerknemerscontroleComponent } from './subjects/ii-a/a-3-werknemerscontrole.component';
@@ -166,8 +169,10 @@ const appRoutes: Routes = [
     // B
     IBSocialistischAlternatiefComponent,
     InleidingBComponent,
-    GelijkheidComponent,
-    NationalisatieComponent,
+    B2GelijkheidComponent,
+    B1NationalisatieComponent,
+    B3ZelfbeheerComponent,
+    B4SecularismeComponent,
     // C
     IIAEconomischeDemocratieComponent,
     AlternatiefComponent,
