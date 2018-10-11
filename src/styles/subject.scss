@@ -55,6 +55,10 @@
   margin-bottom: $em-4;
 }
 
+.mat-expansion-panel-header {
+  height: 60px;
+}
+
 .back-button {
   position: absolute;
   top: -40px;
