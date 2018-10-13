@@ -3,7 +3,8 @@ import {
   Input,
   TemplateRef,
   ContentChildren,
-  AfterContentInit
+  AfterContentInit,
+  ViewEncapsulation
 } from '@angular/core';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
@@ -12,7 +13,8 @@ import { TemplateDirective } from '../directives/template.directive';
 import { getTemplateByName } from '../directives/template.helper';
 @Component({
   selector: 'app-subject',
-  templateUrl: './subject.component.html'
+  templateUrl: './subject.component.html',
+  encapsulation: ViewEncapsulation.None
 })
 export class SubjectComponent implements AfterContentInit {
   faChevronRight = faChevronRight;
