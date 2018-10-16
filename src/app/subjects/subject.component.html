@@ -5,10 +5,9 @@
                 <br />
                 <mat-card>
                     <ng-template *ngTemplateOutlet="introductionTemplate">
-
                     </ng-template>
                 </mat-card>
-                <mat-accordion multi="true">
+                <mat-accordion multi="true" *ngIf="chapters">
                     <mat-expansion-panel class="panel" *ngFor="let chapter of chapters">
                         <mat-expansion-panel-header collapsedHeight="60px" expandedHeight="60px">
                             <mat-panel-title class="panel__title text-left">
@@ -20,7 +19,7 @@
                     </mat-expansion-panel>
                 </mat-accordion>
             </div>
-            <div class="flex flex-row subject__footer">
+            <div class="flex flex-row subject__footer" *ngIf="chapters">
                 <div class="flex-column flex-align-items-left" *ngIf="previous">
                     <div class="flex-row">
                         <a class="footer__icon" [routerLink]="previous.route">

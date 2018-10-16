@@ -95,11 +95,16 @@ import { III5VeranderenComponent } from './subjects/iii/iii-5-veranderen.compone
 import { I6ArbeidswetgevingComponent } from './subjects/ii-i/i-6-arbeidswetgeving.component';
 import { I7ScheidingComponent } from './subjects/ii-i/i-7-scheiding.component';
 import { I8BesluitComponent } from './subjects/ii-i/i-8-besluit.component';
+import { ContactComponent } from './contact/contact.component';
 
 const appRoutes: Routes = [
   {
     path: '',
     component: MainComponent
+  },
+  {
+    path: 'contact',
+    component: ContactComponent
   },
   {
     path: 'A',
@@ -159,6 +164,7 @@ const appRoutes: Routes = [
     MainComponent,
     SubjectComponent,
     TemplateDirective,
+    ContactComponent,
     // A
     IAKapitalismeComponent,
     A1KloofComponent,
